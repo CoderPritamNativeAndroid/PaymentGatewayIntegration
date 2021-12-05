@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="28dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="back_button"
+                    android:paddingEnd="16dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Choose A Payment Option"
+                    android:textColor="#FF5722"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#00FFFFFF"
+            android:text="Your Total Amount"
+            android:textColor="#FFAB91"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewYourTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#00FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:text="15"
+            android:textColor="#FFAB91"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="26dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:text="Pay Via"
+            android:textColor="#FFAB91"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:background="#00FFFFFF"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonNetBanking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/background_design"
+                    android:drawableStart="@drawable/ic_baseline_account_balance_24"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|start"
+                    android:minHeight="56dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="   Net  Banking"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#858585"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/buttonDebitCreditCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/background_design"
+                    android:drawableStart="@drawable/ic_baseline_credit_card_24"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|start"
+                    android:minHeight="56dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="   Debit / Credit  Cards"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#858585"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/buttonUPI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/background_design"
+                    android:drawableStart="@drawable/ic_baseline_double_arrow_24"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|start"
+                    android:minHeight="56dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="   UPI"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#858585"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/buttonPayTmWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/background_design"
+                    android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|start"
+                    android:minHeight="56dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="   PayTm  Wallet"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#858585"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/buttonOtherWallets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/background_design"
+                    android:drawableStart="@drawable/ic_baseline_account_balance_wallet_24"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|start"
+                    android:minHeight="56dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="   Other  Wallets"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#858585"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="56dp"
+                    android:background="#00FFFFFF"
+                    android:drawableStart="@drawable/ic_baseline_check_24"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="  Safe &amp; Secure Payments"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
